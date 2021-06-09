@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Create Section</title>
+</head>
+<body>
+<div class="card">
+	<div class="card-header"><i class="fa fa-aligh-center"></i>Section Register Form</div>
+	<div class="card-body">
+		<form class="" action="" method="POST">
+			{% csrf_token %}
+			{{forms.as_p}}
+			<button class="btn btn-primary" type="Submit">Submit</button>
+		</form>
+	</div>
+</div>
+<div class="card">
+	<div class="card-header"><i class="fa fa-align-justify"></i>Section List</div>
+	<div class="card-body">
+		<table class="table table-responsive-sm">
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Section Name</th>
+					<th>Register Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for section in section %}
+				<tr>
+					<td>{{section.id}}</td>
+					<td>{{section.name}}</td>
+					<td>{{section.date</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>upazilla</title>
+</head>
+<body>
+<div class="card">
+	<div class="card-header"><i class="fa fa-align-justify"></i>Upazilla Register Form</div>
+	<div class="card-body">
+		<form class="" action="" method="POST">
+			{% csrf_token %}
+			{{ forms.as_p }}
+		</form>
+	</div>
+</div>
+<div class="card">
+	<div class="card-header"><i class="fa fa-align-justify"></i>Upazilla List</div>
+	<div class="card-body">
+		<table class="table table-responsive-sm">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Upazilla Name</th>
+					<th>Register Date</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for upazilla in upazilla %}
+				<tr>
+					<td>{{upazilla.id}}</td>
+					<td>{{upazilla.name}}</td>
+					<td>{{upazilla.date</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+</body>
+</html>
